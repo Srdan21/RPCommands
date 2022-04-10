@@ -8,12 +8,13 @@ Config.discordwebhooklink = 'WEBHOOK_HERE'
 -- Enable or disable commands
 -- Set to false to disable
 Config.twitter = true
-Config.dispatch = true
-Config.darkweb = true
-Config.news = true
-Config.doo = true
-Config.ooc = true
-Config.me = true
-Config.showid = true
+Config.anon = true
+Config.dispatch = false
+Config.darkweb = false
+Config.news = false
+Config.doo = false
+Config.ooc = false
+Config.me = false
+Config.showid = false
 
 Config.missingargs = "^1Please provide a message."
