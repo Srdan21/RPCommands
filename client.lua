@@ -13,6 +13,7 @@ end)
 
 Citizen.CreateThread(function()
    TriggerEvent('chat:addSuggestion', '/twt', 'Tweet something')
+   TriggerEvent('chat:addSuggestion', '/anon', 'Tweet something')
    TriggerEvent('chat:addSuggestion', '/dispatch', 'Dispatch')
    TriggerEvent('chat:addSuggestion', '/darkweb', 'Send a message on the darkweb')
    TriggerEvent('chat:addSuggestion', '/news', 'News')
