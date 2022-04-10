@@ -13,6 +13,21 @@ RegisterCommand("twt", function(source, args, raw)
 end)
 end
 
+-- Twitter Anonimo Comando --
+if Config.anon then
+RegisterCommand("anon", function(source, args, raw)
+        if #args <= 0 then
+        TriggerClientEvent('chatMessage', source, Config.missingargs)
+        else
+        local message = table.concat(args, " ")
+        local steam = GetPlayerName(source)
+        args = table.concat(args, ' ')
+        TriggerClientEvent('chatMessage', -1, "ANON | ".. GetPlayerName(source) .."", { 30, 144, 255 }, message)
+        PerformHttpRequest(Config.discordwebhooklink, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**ANON:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+    end
+end)
+end
+
 -- Dispatch Command
 if Config.dispatch then
 RegisterCommand("dispatch", function(source, args, raw)
